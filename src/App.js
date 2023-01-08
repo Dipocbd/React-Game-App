@@ -1,16 +1,19 @@
 import { useState } from "react";
 import "./index.css"
 import { moneyPyramid } from "./Data";
+import Quiz from "./components/Quiz";
 
 function App() {
-  const [first, setfirst] = useState(5)
+  const [first, setfirst] = useState(1)
   return (
     <div className="app">
      <div className="main">
     <div className="top">
       <div className="timer">30</div>
     </div>
-    <div className="bottom">Questions and Answers</div>
+    <div className="bottom">
+      <Quiz/>
+    </div>
 
      </div>
      <div className="pyramid">
