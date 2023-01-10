@@ -1,10 +1,13 @@
 import { useState } from "react";
 import "./index.css"
-import { moneyPyramid } from "./Data";
+import { moneyPyramid, data } from "./Data";
 import Quiz from "./components/Quiz";
 
+
 function App() {
-  const [first, setfirst] = useState(1)
+  const [first, setFirst] = useState(1);
+  const [timeOut, setTimeOut] = useState(false);
+  
   return (
     <div className="app">
      <div className="main">
@@ -12,7 +15,10 @@ function App() {
       <div className="timer">30</div>
     </div>
     <div className="bottom">
-      <Quiz/>
+      <Quiz data ={data} 
+      setTimeOut={setTimeOut}
+      first={first}
+      setFirst={setFirst}/>
     </div>
 
      </div>

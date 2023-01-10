@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const Quiz = () => {
+const Quiz = ({data,setTimeout, first, setFirst}) => {
+
+
+  const [question, setQuestion] = useState(null);
+
+  useEffect(()=>{
+    setQuestion(data[first - 1]);
+  },[data, first]);
+
   return (
     <div className='quiz'>
-        <div className='question'>Who has the most points in an NBA Game?</div>
+        <div className='question'>{question?.question}</div>
         <div className='answers'>
-            <div className='answer wrong'>Kobe Bryant</div>
-            <div className='answer'>Micheal Jordan</div>
-            <div className='answer'>Wilt Chamberlain</div>
-            <div className='answer'>Stephen Curry</div>
+          {
+            question?.answers.map((a)=>(
+            <div className='answer'>{a.text}</div>
+             ))
+          }
 
         </div>
     </div>

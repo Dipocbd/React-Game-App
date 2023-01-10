@@ -59,3 +59,29 @@ export const moneyPyramid = [
         amount:"₦1,024,000"
     },
 ].reverse()
+
+
+export const data = [
+    {
+        id: 1,
+        question: "Who is the first Nigerian to perform at Coachella?",
+        answers:[
+            {
+                text: "Burna Boy",
+                correct:false,
+            },
+            {
+                text: "Wizkid",
+                correct:false,
+            },
+            {
+                text: "Seun Kuti",
+                correct:true,
+            },
+            {
+                text: "Ckay",
+                correct:false,
+            },
+        ]
+    }
+]
