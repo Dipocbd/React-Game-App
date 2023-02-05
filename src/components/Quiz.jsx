@@ -16,8 +16,10 @@ const Quiz = ({data,setTimeout, first, setFirst}) => {
   const handleClick = (a) =>{
     setSelectedAnswer(a);
     setClassName=("answer active");
-    setTimeOut
-  }
+    setTimeout(()=>{
+        setClassName(a.correct ? "answer correct" : "answer wrong");
+    },3000);
+  };
 
   return (
     <div className='quiz'>
